@@ -15,7 +15,6 @@ namespace QuickSort
 
         // Number of elements in array
         private int n;
-        private int j;
 
         void input ()
         {
@@ -54,7 +53,7 @@ namespace QuickSort
         public void q_sort(int low, int high)
         {
             int pivot, i, j;
-            if (low < high)
+            if (low > high)
                 return;
 
             //partition the list into two parts
