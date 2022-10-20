@@ -15,6 +15,7 @@ namespace QuickSort
 
         // Number of elements in array
         private int n;
+        private int j;
 
         void input ()
         {
@@ -65,10 +66,10 @@ namespace QuickSort
 
             pivot = arr[low];
 
-            while (i <=j)
+            while (i <= j)
             {
-                //search for an element greather than pivot
-                while ((arr[i] <= pivot) && (i <= high))
+                //Search for an element greater than pivot
+                while ((arr[1] <= pivot) && (i <= high))
                 {
                     i++;
                     cmp_count++;
@@ -83,18 +84,19 @@ namespace QuickSort
                 }
                 cmp_count++;
 
-                if (i < j) // if the greater element is on the left of the element
+                if (i < j) //if the greater element is on thge left of the element
                 {
-                    //swap the element at index i whit the element at index j
+                    //swap the element at index i with the element at index j
                     swap(i, j);
                     mov_count++;
                 }
+
             }
             //j now contains the index of the last element in the sorted list
 
             if (low < j)
             {
-                //move the pivot to its correct posiyion in the list
+                //move the pivot of its correct position in the list 
                 swap(low, j);
                 mov_count++;
             }
